@@ -22,13 +22,14 @@
 !*/*steam_appid.txt
 
 # Do not ignore source and config dirs.
-!*/Source/**
-!*/Config/**
+!**/Source/**
+!**/Config/**
+
+# The saved dir contains its own config dir, so we keep saved excluded.
+*/Saved/
 
 # Plugin dirs are a project in of themselves, so they get extra specificity.
 !*/Plugins/*/*.uplugin
-!*/Plugins/*/Config/**
-!*/Plugins/*/Source/**
 !*/Plugins/*/Resources/**
 
 # Only allow .uasset and .umap files from /Content dir.
