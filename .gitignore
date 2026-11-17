@@ -1,13 +1,22 @@
-# The .gitignore created by Unreal Engine exludes some files and directories.
-# A different approach is to exclude everything except what we need.
+# The following settings were initially written by the github account MOZGII. They 
+# were modified by Maven Dev for a different repo structure and to add plugin settings.
 
-# The following gitignore settings were mostly written by the github account MOZGII,
-# they were slightly modified by Maven Dev to account for the .gitignore being a dir
-# level higher than the Unreal Engine project dir. Plugin specificity was also added.
+# This .gitignore is designed for the root repo dir containing the Unreal Engine
+# project dir and a "NonEngineContent" dir. The repo should look something like:
+#	>.git (hidden dir)
+#	>.github/
+#	>NonEngineContent/
+#	>UE_Project/
+#	>.gitignore (this file)
+#	>.gitattributes (if using git lfs)
+#	>README.md
+
+# Note that any files/dirs added aside from the ones mentioned above are likely
+# excluded automatically by these settings, and editing would be required.
 
 # Last editied 17/11/2026 by Maven Dev.
 
-# Ignore all files by default, but scan all directories.
+# Ignore all files by default, but keep all dirs.
 *
 !*/
 
@@ -33,13 +42,13 @@
 !*/Plugins/*/Source/**
 !*/Plugins/*/Resources/**
 
-# Only allow .uasset and .umap files from /Content dir.
+# Only allow .uasset and .umap files from the Content dir.
 # They're tracked by git-lfs, don't forget to track other
 # files if adding them here.
 !*/Content/**/*.uasset
 !*/Content/**/*.umap
 
-# Allow any files from /NonEngineContent dir.
-# Any file in /NonEngineContent dir will be managed by git lfs.
+# Allow any files from the NonEngineContent dir.
+# Any file in the NonEngineContent dir will be managed by git lfs.
 # This is where art assets (like .fbx) would be stored.
 !/NonEngineContent/**/*
